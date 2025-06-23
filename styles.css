@@ -1,0 +1,585 @@
+/* 1. Сброс и нормализация */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('fonts/GreatVibes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeJardinFloral';
+    src: url('fonts/LeJardinFloral.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Улучшение отображения на мобильных устройствах */
+html {
+    font-size: 16px;
+    /* можно адаптировать под рем-единицы */
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5;
+    background-color: #ffffff;
+    color: black;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 3. Удаляем стили списков по умолчанию */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 4. Удаляем подчеркивания ссылок и задаём цвет */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 5. Изображения и медиа адаптивные */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 6. Элементы форм — базовая стилизация */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* 7. Курсор для кнопок */
+button {
+    cursor: pointer;
+}
+
+/* 8. Таблицы без отступов */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* 9. Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 10. Пример адаптивного текста */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* 11. Медиа-запрос для мобильных устройств */
+.block {
+    padding: 50px 0 0 0;
+}
+
+.contentBlock {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mainPhotoBlock {
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    background-image: url("images/main.jpg");
+    background-position: center;
+    /* background-size: contain; */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position-y: -0;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* align-items: center; */
+}
+
+.mainPhotoBlock h2 {
+    font-size: 4.5em;
+    text-align: center;
+}
+
+.mainPhotoBlock div {
+    padding-bottom: 40px;
+}
+
+.mainPhotoBlock .weddingDate {
+    font-size: 3em;
+    text-align: center;
+    font-family: 'GreatVibes';
+}
+
+.invitationBlock {
+    font-family: 'GreatVibes';
+    padding: 50px 0;
+    /* border: 1px solid black; */
+}
+
+h1 {
+    font-family: 'GreatVibes';
+    font-size: 8em;
+    letter-spacing: 1.5px;
+    /* font-style: italic; */
+    font-weight: 100;
+}
+
+.title2 {
+    font-family: 'GreatVibes';
+    font-size: 4em;
+    color: #6A4915;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.logoMobile {
+    display: none;
+}
+
+.invitationBlock p {
+    margin-left: 250px;
+    font-size: 1.9em;
+    letter-spacing: 1.5px;
+    text-indent: 50px;
+    /* font-style: italic; */
+    font-weight: 100;
+    margin-top: 20px;
+}
+
+.calendarBlock {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 550px;
+    padding: 50px;
+    /* border: 1px solid black; */
+    margin: 10px auto;
+    box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+    -webkit-box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+}
+
+.calendarBlock>span {
+    display: block;
+    font-size: 2em;
+    font-family: 'GreatVibes';
+    text-align: center;
+    color: #B38857;
+    margin-bottom: 10px;
+}
+
+
+.calendarBlock table {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.calendarBlock table th,
+td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    /* padding: 30px 30px; */
+    /* font-size: 18px; */
+    /* Курсив для тексту і дат */
+}
+
+.calendarBlock table th {
+    background-color: #ffe6e6;
+    color: #cc0000;
+}
+
+.calendarBlock table td {
+    font-style: italic;
+}
+
+.calendarBlock table {
+    /* background-color: #f9f9f9; */
+    border-bottom: 1.2px solid #B28857;
+    color: #B38857;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.calendarBlock .heart {
+    width: 100%;
+    height: 100%;
+    background-image: url('images/heart.png');
+    background-position: center;
+    /* background-position-x: 1px; */
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.restorantBlock {
+    background-color: #fff;
+    text-align: center;
+}
+
+.restorantGallery {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.restorantGallery>img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+    -webkit-box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+}
+
+.restorantMap {
+    margin-top: 30px
+}
+
+.restorantBlock>p:first-child {
+    font-size: 18px;
+    color: rgb(88, 88, 88);
+}
+
+.restorantMap iframe {
+    box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+    -webkit-box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 1px 1px 13px -2px rgba(0, 0, 0, 0.49);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #000;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item img {
+    width: 40px;
+    margin: 10px 0;
+}
+
+.timeline-item .time {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.timeline-item .text {
+    font-size: 16px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    left: 100%;
+    transform: translateX(-50%);
+}
+
+.timeline-item.right::after {
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.formBlock {
+    min-height: 200px;
+}
+
+.formBlock h1 {
+    margin-bottom: 20px;
+}
+
+.formItemCard {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid rgb(164, 164, 164);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px
+}
+
+
+.formItemCard input[type="text"] {
+    /* border: none; */
+    /* border-bottom: 1px solid rgb(164, 164, 164); */
+    /* padding: 5px 0; */
+    width: 60%;
+    margin-top: 20px;
+}
+
+.formItemCard input[type="text"]:focus {
+    border-bottom: 2px solid rgb(128, 194, 255);
+    padding-left: 10px;
+}
+
+.formItemCard input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.formItemCard input[type=button],
+input[type=submit] {
+    padding: 10px;
+    cursor: pointer;
+    /* background-color: ; */
+    border: 1px solid rgb(208, 120, 255);
+}
+
+
+
+.dresscode-block {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* background-color: #cc0000; */
+    min-height: 150px;
+}
+
+.timerBlock {
+    background-color: #f2f2f2;
+    padding: 70px 0;
+    margin-top: 30px;
+}
+
+.timer__items {
+    /* width: 60%; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timer__item {
+    display: flex;
+    font-size: 2.8rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    min-width: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 15px;
+    text-align: center;
+    border: 4px solid #b38857;
+    color: #b38857;
+    /* padding: 25px; */
+}
+
+.timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+.timer__item:not(:last-child)::after {
+    content: ':';
+    position: absolute;
+    right: -30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .mainPhotoBlock h2 {
+        font-size: 4.5em;
+        text-align: center;
+    }
+
+    .mainPhotoBlock div {
+        padding-bottom: 40px;
+    }
+
+    .mainPhotoBlock .weddingDate {
+        font-size: 3em;
+        text-align: center;
+        font-family: 'GreatVibes';
+    }
+
+    .logoDesctop {
+        display: none;
+    }
+
+    .logoMobile {
+        display: block;
+        font-size: 6em;
+        text-align: center;
+        font-family: 'GreatVibes';
+    }
+
+    .contentBlock {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .mainPhotoBlock {
+        background-attachment: scroll;
+        background-position-y: 0;
+        background-position-x: -150px;
+        /* height: 50vh; */
+        /* width: 100%; */
+    }
+
+    .invitationBlock p,
+    h2 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .calendarBlock {
+        height: auto;
+        width: auto;
+        max-width: 700px;
+        max-height: 550px;
+        padding: 20px;
+    }
+
+    .calendarBlock .heart {
+        background-size: 150% 150%;
+    }
+
+    .formItemCard input[type="text"] {
+        width: 100%;
+    }
+
+    .timer__item {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 10px;
+        border: 2.5px solid #b38857;
+    }
+
+    .timer__item:not(:last-child)::after {
+        right: -18px;
+    }
+}
