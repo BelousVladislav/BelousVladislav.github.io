@@ -121,13 +121,13 @@ h6 {
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    background-image: url("images/main.jpg");
-    background-position: center;
+    background-image: url("images/main3.jpg");
+    /* background-position: top; */
     /* background-size: contain; */
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position-y: -0;
+    background-position-y: -360px;
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -494,9 +494,37 @@ input[type=submit] {
 
 
 
+@media (min-width: 320px) and (max-width: 390px) {
+    .mainPhotoBlock {
+        background-attachment: scroll;
+        background-position-y: 0;
+        background-position-x: -10px;
+    }
+}
 
+@media (min-width: 390px) and (max-width: 768px) {
+    .mainPhotoBlock {
+        background-attachment: scroll;
+        background-position-y: 0;
+        background-position-x: -80px;
+    }
+}
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    .mainPhotoBlock {
+        background-attachment: scroll;
+        background-position-y: 0;
+        background-position-x: -0px;
+    }
+}
 
+@media (min-width: 1023px) and (max-width: 1300px) {
+    .mainPhotoBlock {
+        background-attachment: scroll;
+        background-position-y: -200px;
+        background-position-x: -0px;
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -539,15 +567,15 @@ input[type=submit] {
         margin: 0 auto;
     }
 
-    .mainPhotoBlock {
+    /* .mainPhotoBlock {
         background-attachment: scroll;
         background-position-y: 0;
-        background-position-x: -150px;
+        background-position-x: -0px;
         /* height: 50vh; */
-        /* width: 100%; */
-    }
+    /* width: 100%; */
+    /* } */
 
-    .invitationBlock p,
+    */ .invitationBlock p,
     h2 {
         margin-left: 0;
         text-align: center;
