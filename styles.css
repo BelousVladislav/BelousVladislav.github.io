@@ -370,6 +370,8 @@ td {
 
 .formBlock {
     min-height: 200px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.6px;
 }
 
 .formBlock h1 {
@@ -382,7 +384,10 @@ td {
     border: 1px solid rgb(164, 164, 164);
     border-radius: 8px;
     margin-bottom: 20px;
-    padding: 20px
+    padding: 20px;
+    box-shadow: 1px 1px 12px -8px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 1px 1px 12px -8px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 1px 1px 12px -8px rgba(0, 0, 0, 1);
 }
 
 
@@ -413,11 +418,65 @@ input[type=submit] {
     border: 1px solid rgb(208, 120, 255);
 }
 
+.detailBlock {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.7px;
+    /* text-indent: 30px; */
+}
 
+.detailCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.detailCards .card {
+    margin: 20px;
+    width: 20em;
+}
+
+.detailCards .card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.detailCards .card-body h5 {
+    text-align: center;
+}
+
+.detailCards .card-body p {
+    margin-top: 10px;
+    text-align: center;
+}
 
 .dresscode-block {
     font-family: 'Playfair Display', serif;
     color: #333;
+}
+
+.dresscodBlock p {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.7px;
+    text-indent: 30px;
+}
+
+.dresscodBlock .imageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dresscodBlock .imageContainer img {
+    max-width: 450px;
+    min-width: 300px;
+    /* width: 40%; */
+    margin: 30px;
 }
 
 .timer {
@@ -430,9 +489,14 @@ input[type=submit] {
 }
 
 .timerBlock {
-    background-color: #f2f2f2;
-    padding: 70px 0;
-    margin-top: 30px;
+    background-color: #fff3e3;
+    padding: 50px 0;
+    margin-top: 20px
+        /* margin-top: 20px; */
+}
+
+.timerBlock h2 {
+    margin-bottom: 20px;
 }
 
 .timer__items {
@@ -586,8 +650,32 @@ input[type=submit] {
         background-size: 150% 150%;
     }
 
+    .detailCards .card {
+        margin: 20px;
+        width: 100%;
+    }
+
     .formItemCard input[type="text"] {
         width: 100%;
+    }
+
+    .timerBlock {
+        background-color: #fff3e3;
+        padding: 30px 0;
+        /* margin-top: 20px; */
+    }
+
+    .timerBlock h2 {
+        margin-bottom: 20px;
+    }
+
+    .timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        /* background-color: #cc0000; */
+        min-height: 80px;
     }
 
     .timer__item {
