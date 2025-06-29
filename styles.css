@@ -541,9 +541,20 @@ input[type=submit] {
     right: -30px;
 }
 
+.formBtn {
+    border: 1px solid #B28857;
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: #B28857;
+}
 
-
-
+.formBtn:hover {
+    /* border: 1.5px solid #b38857; */
+    /* padding: 8px 10px; */
+    /* border-radius: 8px; */
+    /* color: #ffffff; */
+    background-color: #FFF2E3;
+}
 
 
 
